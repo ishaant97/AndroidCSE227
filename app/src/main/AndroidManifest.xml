@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCSE227">
         <activity
+            android:name=".Unit1.Bricks"
+            android:exported="true" />
+        <activity
+            android:name=".Unit1.DividingLayout"
+            android:exported="true"/>
+        <activity
+            android:name=".Unit1.Basics"
+            android:exported="true"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

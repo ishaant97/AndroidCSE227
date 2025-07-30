@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".Unit1.Basics">
+
+    <Button
+        android:id="@+id/intentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intent"
+        />
+
+    <Button
+        android:id="@+id/toastButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toast"
+        />
+
+    <EditText
+        android:id="@+id/lengthEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Length"
+        />
+    <EditText
+        android:id="@+id/widthEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Width"
+        />
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        />
+</LinearLayout>
