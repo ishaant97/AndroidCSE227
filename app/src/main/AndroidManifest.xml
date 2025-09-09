@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCSE227">
         <activity
+            android:name=".Unit2.DuckAnimation"
+            android:exported="true" />
+        <activity
+            android:name=".Unit2.Animation"
+            android:exported="true" />
+        <activity
             android:name=".Unit2.MyCanvasView"
             android:exported="true" />
         <activity
