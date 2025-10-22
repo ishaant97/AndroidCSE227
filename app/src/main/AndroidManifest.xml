@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCSE227">
+        <activity
+            android:name=".Unit2.NameUsingCanvas"
+            android:exported="true" />
+        <activity
+            android:name=".Unit6.WebView"
+            android:exported="true" />
+        <activity
+            android:name=".Unit5.WifiBluetoothAndAirPlaneMode"
+            android:exported="true" />
+        <activity
+            android:name=".Unit3.GetActivity"
+            android:exported="true" />
         <activity
             android:name=".Unit2.DuckAnimation"
             android:exported="true" />

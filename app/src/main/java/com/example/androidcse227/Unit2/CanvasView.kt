@@ -118,5 +118,75 @@ class CanvasView(context : Context) : View(context) {
         satSignal.addArc(RectF(satDishCenterX - 120f, satDishCenterY - 120f, satDishCenterX + 120f, satDishCenterY + 120f), 220f, 80f)
         canvas.drawPath(satSignal, paint)
 
+        // === Capital W ===
+        // Reset paint for W or set new properties
+        paint.color = Color.MAGENTA // Let's give W a different color
+        paint.style = Paint.Style.STROKE
+        paint.strokeWidth = 12f // Make it a bit thicker
+
+        // Define starting coordinates and size for W
+        val wStartX = 100f
+        val wStartY = 1300f
+        val wHeight = 200f
+        val wSegmentWidth = 50f // Width of each segment of W
+
+        val wPath = Path()
+        // Move to the top-left of W
+        wPath.moveTo(wStartX, wStartY)
+        // Line down to bottom-left
+        wPath.lineTo(wStartX + wSegmentWidth, wStartY + wHeight)
+        // Line up to the middle peak
+        wPath.lineTo(wStartX + wSegmentWidth * 2, wStartY)
+        // Line down to bottom-right
+        wPath.lineTo(wStartX + wSegmentWidth * 3, wStartY + wHeight)
+        // Line up to top-right
+        wPath.lineTo(wStartX + wSegmentWidth * 4, wStartY)
+
+        canvas.drawPath(wPath, paint)
+
+        // === Bar Graph ===
+        paint.style = Paint.Style.FILL // Bars are typically filled
+
+        // Data for the bars (values represent heights)
+        val barData = floatArrayOf(150f, 250f, 200f, 300f)
+        val barColors = intArrayOf(Color.CYAN, Color.YELLOW, Color.rgb(255, 165, 0), Color.LTGRAY) // Orange, Light Gray
+
+        // Bar graph properties
+        val graphStartX = 100f
+        val graphBottomY = 1800f // Y-coordinate for the bottom of the bars
+        val barWidth = 80f
+        val barSpacing = 40f // Spacing between bars
+        val maxBarHeight = 350f // A reference max height to scale bars if needed (optional)
+
+        // Draw the bars
+        for (i in barData.indices) {
+            paint.color = barColors[i]
+            val barHeight = barData[i] // Use direct data value as height for simplicity here
+
+            // Calculate coordinates for each bar
+            // Remember: Y increases downwards on the canvas
+            val left = graphStartX + i * (barWidth + barSpacing)
+            val top = graphBottomY - barHeight // Subtract height from bottom
+            val right = left + barWidth
+            val bottom = graphBottomY
+
+            canvas.drawRect(left, top, right, bottom, paint)
+
+            // Optional: Draw value text on top of each bar
+            paint.color = Color.BLACK
+            paint.textSize = 30f
+            paint.textAlign = Paint.Align.CENTER
+            canvas.drawText(barData[i].toInt().toString(), left + barWidth / 2, top - 10f, paint)
+        }
+
+        // Optional: Draw X and Y axis lines
+        paint.color = Color.BLACK
+        paint.strokeWidth = 5f
+        // Y-axis line
+        canvas.drawLine(graphStartX - barSpacing / 2, graphBottomY - maxBarHeight - 20f, graphStartX - barSpacing/2, graphBottomY + 10f, paint)
+        // X-axis line
+        canvas.drawLine(graphStartX - barSpacing / 2, graphBottomY, graphStartX + barData.size * (barWidth + barSpacing), graphBottomY, paint)
+
+
     }
 }
