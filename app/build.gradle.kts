@@ -43,8 +43,22 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.firebase.auth)
+    // 1. Add the Firebase BoM (This manages all versions for you)
+    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
+
+    // 2. Add Firebase UI (Use the version you currently have)
+    implementation("com.firebaseui:firebase-ui-auth:8.0.2")
+
+    // 3. Add Firebase Auth & Database WITHOUT version numbers
+    // The BoM above will automatically pick the correct versions.
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+
+    // Note: You can remove "firebase-database-ktx" and just use "firebase-database".
+    // The modern libraries include the Kotlin extensions automatically.
 }
