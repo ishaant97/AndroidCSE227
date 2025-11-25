@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCSE227">
         <activity
+            android:name=".Unit2.EndTermPractical.AnimationActivity"
+            android:exported="false" />
+        <activity
             android:name=".Unit2.EndTermPractical.CanvasActivity"
             android:exported="true" />
         <activity
