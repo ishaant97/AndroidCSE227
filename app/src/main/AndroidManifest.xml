@@ -22,14 +22,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCSE227">
         <activity
-            android:name=".Unit2.EndTermPractical.TransitionActivity"
+            android:name=".Unit3.RetroActivity"
             android:exported="false" />
+        <activity
+            android:name=".Unit2.EndTermPractical.TransitionActivity"
+            android:exported="true" />
         <activity
             android:name=".Unit2.EndTermPractical.AnimatorActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Unit2.EndTermPractical.AnimationActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Unit2.EndTermPractical.CanvasActivity"
             android:exported="true" />

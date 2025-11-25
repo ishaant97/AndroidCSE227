@@ -40,7 +40,7 @@ class RealTimeDatabase : AppCompatActivity() {
         saveBtn = findViewById(R.id.saveBtn)
         recyclerView = findViewById(R.id.recyclerView)
 
-        database = FirebaseDatabase.getInstance().getReference("Users")
+        database = FirebaseDatabase.getInstance("https://newandroidcse227-default-rtdb.firebaseio.com").getReference("Users")
         Log.d("DB_URL", database.toString())
 
 

@@ -28,7 +28,6 @@ class TransitionActivity : AppCompatActivity() {
             TransitionManager.beginDelayedTransition(rootLayout,transition)
             textView.visibility = if (isVisible) TextView.GONE else TextView.VISIBLE
             isVisible=!isVisible
-
         }
     }
 }
