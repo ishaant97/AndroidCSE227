@@ -2,7 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Bluetooth permissions for Android 12+ -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:required="true" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +21,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCSE227">
+        <activity
+            android:name=".Unit1.Firebase.AuthActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Unit6.WebView2"
+            android:exported="true" />
+        <activity
+            android:name=".Unit5.Bluetooth"
+            android:exported="true" />
         <activity
             android:name=".Unit4.Sensors"
             android:exported="true" />
