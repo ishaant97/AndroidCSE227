@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCSE227">
         <activity
+            android:name=".Unit4.NecessarySensors"
+            android:exported="true" />
+        <activity
             android:name=".Unit1.Firebase.RealTimeDatabase"
             android:exported="true" />
         <activity

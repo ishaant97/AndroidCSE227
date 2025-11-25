@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Unit4.NecessarySensors">
+
+    <TextView
+        android:id="@+id/tvMotion"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Motion Data"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="#E0F7FA"/>
+
+    <TextView
+        android:id="@+id/tvPosition"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Position Data"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="#F3E5F5"/>
+
+    <TextView
+        android:id="@+id/tvEnvironment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Environment Data"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="#E8F5E9"/>
+
+</LinearLayout>
