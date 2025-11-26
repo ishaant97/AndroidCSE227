@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCSE227">
         <activity
+            android:name=".Unit5.WifiActivity"
+            android:exported="true" />
+        <activity
             android:name=".Unit3.RetrofitActivity"
             android:exported="true" />
         <activity
